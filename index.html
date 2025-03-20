@@ -21,6 +21,23 @@
             text-align: center;
             flex-direction: column;
             overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        .album {
+       display: flex;
+       flex-wrap: nowrap;
+       gap: 20px;
+       overflow-x: auto;
+       padding: 20px;
+        }
+
+        .album img {
+       max-width: 100%;
+       height: auto;
+       display: block;
+       border-radius: 10px;
         }
         .message-container {
             background: rgba(255, 255, 255, 0.2);
