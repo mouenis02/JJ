@@ -24,21 +24,31 @@
             overflow-x: auto;
             overflow-y: hidden;
             white-space: nowrap;
+            margin: 0;
+            padding: 0;
         }
         .album {
-       display: flex;
-       flex-wrap: nowrap;
-       gap: 20px;
-       overflow-x: auto;
-       padding: 20px;
-        }
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto; /* Enable scrolling */
+    padding: 20px;
+    align-items: center; /* Ensures images are centered */
+}
 
-        .album img {
-       max-width: 100%;
-       height: auto;
-       display: block;
-       border-radius: 10px;
-        }
+.album img {
+    max-width: 90vw; /* Ensure images fit the screen */
+    max-height: 80vh; /* Prevents images from exceeding viewport */
+    object-fit: contain; /* Ensures full image is visible */
+    display: block;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) { /* Mobile adjustments */
+    .album img {
+        max-width: 80vw;
+        max-height: 70vh;
+    }
         .message-container {
             background: rgba(255, 255, 255, 0.2);
             padding: 30px;
